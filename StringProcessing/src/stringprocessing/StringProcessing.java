@@ -26,7 +26,7 @@ public class StringProcessing {
         String[] records = new String[100];
         try {
             Scanner reader = new Scanner(new File(args[0]));
-        
+            
             int currentIndex = 0;
             while (reader.hasNext()) {
                 String[] line = reader.nextLine().split(",");
@@ -37,6 +37,15 @@ public class StringProcessing {
                 String age = line[3];
                 String phoneNumber = line[4];
                 String email = line[5];
+                
+                /*
+                for lvl 2
+                read one line at a time
+                if valid save to array
+                if not valid output to console immediately
+                */
+                
+                
                
                 records[currentIndex] = String.format("%-20s%-20s%-10s%-10s%-20s%-30s", firstname, lastname, gender, age, phoneNumber, email);
                 System.out.println(records[currentIndex]);
